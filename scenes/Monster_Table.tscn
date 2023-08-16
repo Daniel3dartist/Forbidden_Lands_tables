@@ -1,0 +1,955 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcr3cjm7yg4st"]
+
+[ext_resource type="Script" path="res://scripts/Moster_Table.gd" id="1_u7ulu"]
+[ext_resource type="Script" path="res://scripts/item_selector.gd" id="2_24akx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_scsba"]
+bg_color = Color(0.870588, 0.305882, 0.337255, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 0.498039, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f333w"]
+bg_color = Color(0.211765, 0.239216, 0.290196, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u7ulu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.498039, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_scsba")
+text = "Monsters"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/Label2"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Dice_D66" type="Label" parent="Panel/VBoxContainer/Label2"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "D66"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MONSTER" type="Label" parent="Panel/VBoxContainer/Label2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "MONSTER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/Label2"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+scroll_vertical = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+script = ExtResource("2_24akx")
+
+[node name="strangling_vine" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/strangling_vine"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/strangling_vine"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "11-12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/strangling_vine"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Strangling Vine"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/strangling_vine"]
+visible = false
+layout_mode = 2
+text = "76"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/strangling_vine"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Gray_Bear" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Gray_Bear"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Gray_Bear"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "13-15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Gray_Bear"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Gray Bear"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Gray_Bear"]
+visible = false
+layout_mode = 2
+text = "100"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Gray_Bear"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Nightwarg" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Nightwarg"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Nightwarg"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "16-22"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Nightwarg"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Nightwarg"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Nightwarg"]
+visible = false
+layout_mode = 2
+text = "114"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Nightwarg"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Ghost" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ghost"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ghost"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "23-24"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ghost"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Ghost"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ghost"]
+visible = false
+layout_mode = 2
+text = "94"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ghost"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Ghoul" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ghoul"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ghoul"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "25-26"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ghoul"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Ghoul"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ghoul"]
+visible = false
+layout_mode = 2
+text = "122"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ghoul"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Skeleton" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Skeleton"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Skeleton"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "31-32"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Skeleton"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Skeleton"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Skeleton"]
+visible = false
+layout_mode = 2
+text = "122"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Skeleton"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Restless_Dead" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Restless_Dead"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Restless_Dead"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "33-34"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Restless_Dead"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Restless Dead"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Restless_Dead"]
+visible = false
+layout_mode = 2
+text = "122"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Restless_Dead"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Wyvern" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Wyvern"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Wyvern"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "35-36"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Wyvern"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Wyvern"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Wyvern"]
+visible = false
+layout_mode = 2
+text = "124"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Wyvern"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Harpies" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Harpies"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Harpies"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "41-42"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Harpies"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Harpies"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Harpies"]
+visible = false
+layout_mode = 2
+text = "104"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Harpies"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Minotaur" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Minotaur"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Minotaur"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "43"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Minotaur"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Minotaur"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Minotaur"]
+visible = false
+layout_mode = 2
+text = "112"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Minotaur"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Ent" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ent"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ent"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "44"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Ent"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ent"]
+visible = false
+layout_mode = 2
+text = "92"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Ent"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Abyss_Worm" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Abyss_Worm"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Abyss_Worm"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "45"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Abyss_Worm"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Abyss Worm"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Abyss_Worm"]
+visible = false
+layout_mode = 2
+text = "76"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Abyss_Worm"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Giant_Squid" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Giant_Squid"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Giant_Squid"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "46"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Giant_Squid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Giant Squid"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Giant_Squid"]
+visible = false
+layout_mode = 2
+text = "98"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Giant_Squid"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Sea_Serpent" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Sea_Serpent"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Sea_Serpent"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "51"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Sea_Serpent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Sea Serpent"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Sea_Serpent"]
+visible = false
+layout_mode = 2
+text = "116"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Sea_Serpent"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Troll" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Troll"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Troll"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "52"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Troll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Troll"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Troll"]
+visible = false
+layout_mode = 2
+text = "120"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Troll"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Death_Knight" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Death_Knight"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Death_Knight"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "53"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Death_Knight"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Death Knight"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Death_Knight"]
+visible = false
+layout_mode = 2
+text = "86"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Death_Knight"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Insectoids" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Insectoids"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Insectoids"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "54"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Insectoids"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Insectoids"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Insectoids"]
+visible = false
+layout_mode = 2
+text = "108"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Insectoids"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Bloodling" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Bloodling"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Bloodling"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "55"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Bloodling"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Bloodling"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Bloodling"]
+visible = false
+layout_mode = 2
+text = "78"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Bloodling"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Manticore" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Manticore"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Manticore"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "56"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Manticore"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Manticore"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Manticore"]
+visible = false
+layout_mode = 2
+text = "110"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Manticore"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Gryphon" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Gryphon"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Gryphon"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "61"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Gryphon"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Gryphon"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Gryphon"]
+visible = false
+layout_mode = 2
+text = "102"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Gryphon"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Giant" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Giant"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Giant"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "62"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Giant"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Giant"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Giant"]
+visible = false
+layout_mode = 2
+text = "96"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Giant"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Hydra" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Hydra"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Hydra"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "63"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Hydra"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Hydra"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Hydra"]
+visible = false
+layout_mode = 2
+text = "106"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Hydra"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Demon" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Demon"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Demon"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "64"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Demon"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Demon"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Demon"]
+visible = false
+layout_mode = 2
+text = "80"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Demon"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Drakewyrm" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Drakewyrm"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Drakewyrm"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "65"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Drakewyrm"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Drakewyrm"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Drakewyrm"]
+visible = false
+layout_mode = 2
+text = "90"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Drakewyrm"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Dragon" type="HBoxContainer" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Container" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Dragon"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="roll" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Dragon"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "66"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Dragon"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 35
+text = "Dragon"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pdf_page" type="Label" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Dragon"]
+visible = false
+layout_mode = 2
+text = "88"
+
+[node name="Container2" type="Container" parent="Panel/VBoxContainer/VBoxContainer/ScrollContainer/VBoxContainer/Dragon"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="D66_Roll" type="Button" parent="Panel/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 110)
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_f333w")
+text = "Roll"
+
+[node name="FileDialog" type="FileDialog" parent="."]
+show_hidden_files = true
+
+[node name="Tests_Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -11.0
+offset_right = -75.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="button_up" from="Panel/VBoxContainer/VBoxContainer/D66_Roll" to="Panel" method="_on_d_66_roll_button_up"]

@@ -1,0 +1,10 @@
+bdbec74c6e5bd72edee867077d70896c
+::res://::1692156747
+export_presets.cfg::TextFile::-1::1692016734::0::1::::<><>::
+icon.svg::CompressedTexture2D::642369065391178786::1689716964::1689716979::1::::<><>::
+::res://scenes/::1692143919
+Monster_Table.tscn::PackedScene::2563596932907532699::1692143919::0::1::::<><>::res://scripts/Moster_Table.gd<>res://scripts/item_selector.gd
+::res://scripts/::1692143199
+diceroll.gd::GDScript::-1::1691949663::0::1::::DiceRoll<>Node<>::
+item_selector.gd::GDScript::-1::1692143199::0::1::::<>VBoxContainer<>::
+Moster_Table.gd::GDScript::-1::1692142528::0::1::::<>DiceRoll<>::
